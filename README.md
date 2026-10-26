@@ -28,7 +28,9 @@ receiving field cannot tell it apart from real typing.
 - **Keyboard-layout independent** — types the intended character on non-US/IT
   layouts (DE, FR, ES, …).
 - **Trigger modes** — double-click-to-start, focus-change-to-start, optional
-  "press Enter after typing".
+  "press Enter after typing" (macOS).
+- **Themes** — 8 themes (ReForge, Night, labforge, Graphite, High contrast) with
+  Auto / Light / Dark mode; settings in a dedicated window.
 - **Encrypted clipboard history** — key stored in the macOS Keychain / Windows
   DPAPI (this-device-only), never derived from hardware IDs.
 - **Fully localized** — every UI string in Italian and English.
@@ -56,25 +58,25 @@ verify before opening:
 
 **macOS**
 ```
-shasum -a 256 KeyKeeper_v1.1.2.dmg
-# 5d46be79e0a178bcc0ba911bcaa6973d997a24b8f728203f0bd43a51926cea85
+shasum -a 256 KeyKeeper_v1.2.0.dmg
+# c9844ba5cdefddce8e66ef1c28ee734ed6dad71a0de4a8969cc04c1747c6d6ca
 ```
 
 **Windows x64**
 ```
-CertUtil -hashfile KeyKeeper-v1.1.2-Windows-x64.zip SHA256
-# 7554fa5b9e787e50ebc040a4d8a5e2e74fe0aefb4c345102135ae9500519a5db
+CertUtil -hashfile KeyKeeper-v1.2.0-Windows-x64.zip SHA256
+# 011774db78b3cc326ddc564aaa012b6db595aaf6d66d9ab3a03595e64752a907
 ```
 
 **Windows ARM64**
 ```
-CertUtil -hashfile KeyKeeper-v1.1.2-Windows-ARM64.zip SHA256
-# 3098bc11ac981314eb88ba1fa2b983657ccc4bb98bd23e3b53c74fe2bc1544b2
+CertUtil -hashfile KeyKeeper-v1.2.0-Windows-ARM64.zip SHA256
+# fc93985692328c3fb6b94a98e87ddb44a3cb59f4bd412365f53ae19b096dba64
 ```
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md). Latest: **v1.1.2** (build 20260622).
+See [CHANGELOG.md](CHANGELOG.md). Latest: **v1.2.0** (build 20261026).
 
 ## Issues
 
@@ -94,6 +96,10 @@ helps keep the lights on (Apple Developer code-signing, VPS, domain).
 Proprietary. © 2026 Iuri Vaccari — labforge.tech. All rights reserved.
 The application binaries are distributed free of charge for personal use under
 the EULA presented on first launch. The source code is not open.
+Third-party components remain under their own licenses: Poppins typeface
+(SIL Open Font License 1.1, OFL.txt included), KeyboardShortcuts (MIT, macOS),
+.NET/WPF and CommunityToolkit.Mvvm (MIT, Windows), Hardcodet.NotifyIcon.Wpf
+(CPOL 1.02, Windows).
 
 - Website: <https://labforge.tech>
 - Support: support@labforge.tech

@@ -2,6 +2,38 @@
 
 Versioning: MAJOR.MINOR.PATCH (build YYYYMMDD).
 
+## 1.2.0 — 2026-10-26 (build 20261026)
+
+Reliable typing everywhere, themes and a new Settings window.
+
+### Fixed
+
+**Both platforms**
+- Wrong symbols, missing characters and inverted case in virtual machines, remote desktops and browser-based VM consoles: every character is now sent as a real key press (with real Shift and AltGr) and Caps Lock is compensated. The clipboard is no longer used while typing.
+- Esc stops typing at any moment, including the wait and the countdown; a second start no longer overlaps the one in progress.
+- The clipboard is no longer rewritten after typing: a password copied from a password manager no longer ends up in the history or back on the clipboard after the password manager cleared it.
+- The history limit applies from launch; the default language follows the system.
+
+**macOS**
+- Universal app: now also runs on Intel Macs (previously Apple Silicon only).
+- The "Italiano" target layout pointed to the legacy QZERTY layout; a saved choice is converted automatically.
+- "Restart KeyKeeper" really restarts the app; typing no longer starts before the license is accepted.
+- A temporary Keychain error can no longer make the history unreadable.
+
+**Windows**
+- In the default mode typing now also works in VMs, RDP and browser consoles (text often did not arrive before).
+- Dead-key accents handled; correct target layout even when it differs from the PC's.
+- The shortcut must include Ctrl, Alt or Win; if another app already uses it, the previous one stays active.
+- The license acceptance checkbox text is now visible.
+
+### Added
+- Themes: ReForge light (default), ReForge, Night, Night light, labforge dark, labforge light, Graphite, High contrast, with mode Auto / Light / Dark.
+- Settings in a dedicated window with five sections: General, Typing, Remote & VM, History, Appearance.
+- Third-party components listed in About and Help (Poppins typeface, SIL Open Font License 1.1).
+
+### Notes
+- Windows: binaries are not yet Authenticode-signed (SmartScreen: "More info" → "Run anyway"). The ZIP also contains OFL.txt, the license of the Poppins typeface.
+
 ## 1.1.2 — 2026-06-22 (build 20260622)
 
 macOS crash fix, plus a version-aligned Windows build.
